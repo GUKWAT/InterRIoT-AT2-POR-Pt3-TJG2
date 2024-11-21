@@ -1,3 +1,17 @@
+"""
+Assessment Title: Portfolio Part 3
+Cluster:          Intermediate RIoT
+Qualification:    ICT50220 Diploma of Information Technology (Advanced Programming)
+Name:
+Student ID:       20095319
+Year/Semester:    2024/S2
+
+"""
+
+
+
+
+
 import casbin
 from fastapi import FastAPI
 import os
@@ -17,3 +31,11 @@ api.add_middleware(AuthenticationMiddleware, backend=baskend)
 async def index():
     return 'Hello, World'
 
+@api.get('/ds1/res1')
+async def end_point_1():
+    return 'Hello, world 1'
+
+# New endpoint: /ds2/res2
+@api.get('/ds2/res2')
+async def end_point_2():
+    return 'Hello, world 2'
