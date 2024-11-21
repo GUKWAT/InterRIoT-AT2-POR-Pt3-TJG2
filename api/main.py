@@ -17,10 +17,3 @@ api.add_middleware(AuthenticationMiddleware, backend=baskend)
 async def index():
     return 'Hello, World'
 
-@api.get('/ds1/res1')
-async def ds1_res1():
-    return 'alice'
-
-@api.get('/ds2/res2')
-async def ds2_res2():
-    return 'alice'
